@@ -1,8 +1,7 @@
-from resources object.collect1 import collect1
-from resources object.addgroup1 import addgroup1
+import verysimplemodule
 
-collect1 = Collect1()
-addgroup1 = Addgroup1()
+collect1 = verysimplemodule.Collect1()
+addgroup1 = verysimplemodule.Addgroup1()
 
 
 
