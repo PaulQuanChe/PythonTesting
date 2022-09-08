@@ -1,3 +1,5 @@
+class Addgroup1():
+    def__init__(self)
 #!/bin/env python3
 from telethon.sync import TelegramClient
 from telethon.tl.functions.messages import GetDialogsRequest
