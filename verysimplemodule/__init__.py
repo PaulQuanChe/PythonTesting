@@ -1,7 +1,5 @@
-import verysimplemodule
-
-collect1 = verysimplemodule.Collect1()
-addgroup1 = verysimplemodule.Addgroup1()
+from verysimplemodule.object_addgroup1 import addgroup1
+from verysimplemodule.object_collect1 import collect1
 
 
 
