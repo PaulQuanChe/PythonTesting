@@ -3,9 +3,65 @@
 import os
 import sys
 import textwrap
-
 import setuptools
 from setuptools.command.install import install
+>>> from setuptools import find_packages
+>>> find_packages(where='src', exclude=['mypkg2'])
+['mypkg1']
+
+from setuptools import setup, find_packages
+
+
+with open("README.md", "r") as f:
+
+    long_description = f.read()
+
+setup(
+
+    name="<PythonTesting>", # Replace with your username
+
+    version="1.0.0",
+
+    packages = find_packages() + find_packages(where='src', excludee=['mypkg2']),
+
+    package_dir = {'': 'src', 'base': 'base'},
+
+    author ="<cheminhquan>",
+
+    author_email="<minhquanpaul@gmail.com>",
+
+    license = "MIT",
+
+    description="<Template Setup.py package>",
+
+    long_description= "a unified collection of code to monitor client private information and indicators eg phone,id,hash",
+
+    long_description_content_type="text/markdown",
+
+    #readme = "README.md",
+
+    #homepage = "https://github.com/PaulQuanChe/PythonTesting.git",
+    
+    url="<>",
+
+    packages = setuptools.find_packages(),
+
+    classifiers=[
+
+        "Programming Language :: Python :: 3",
+
+        "License :: OSI Approved :: MIT License",
+
+        "Operating System :: OS Independent",
+
+    ],
+
+    python_requires='>=3.10',
+
+)
+
+
+
 
 here = os.path.dirname(__file__)
 

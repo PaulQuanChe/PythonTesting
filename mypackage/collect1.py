@@ -1,5 +1,4 @@
-class Collect1():
-    def__init__(self):
+
 from telethon.sync import TelegramClient
 from telethon.tl.functions.messages import GetDialogsRequest
 from telethon.tl.types import InputPeerEmpty

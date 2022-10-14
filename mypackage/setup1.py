@@ -10,8 +10,57 @@ re="\033[1;31m"
 gr="\033[1;32m"
 cy="\033[1;36m"
 
+#setup1.py --help-commands
 import os, sys
 import time
+import addgroup1
+import collect1
+
+
+import setuptools
+from setuptools.command.install import install
+from setuptools import setup1
+
+with open("README.md", "r") as fh:
+
+    long_description = fh.read()
+
+setuptools.setup(
+
+    name="<mypackage>", # Replace with your username
+
+    version="1.0.0",
+
+    author="<cheminhquan>",
+
+    author_email="<minhquanpaul@gmail.com>",
+
+    description="<Template Setup.py package>",
+
+    long_description=long_description,
+
+    long_description_content_type="text/markdown",
+
+    url="<https://github.com/authorname/templatepackage>",
+
+    packages=setuptools.find_packages(),
+
+    classifiers=[
+
+        "Programming Language :: Python :: 3",
+
+        "License :: OSI Approved :: MIT License",
+
+        "Operating System :: OS Independent",
+
+    ],
+
+    python_requires='>=3.10',
+
+)
+
+
+
 
 def banner():
 	os.system('clear')
