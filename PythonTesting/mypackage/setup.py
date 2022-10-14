@@ -5,32 +5,26 @@ import sys
 import textwrap
 import setuptools
 from setuptools.command.install import install
+>>> from setuptools import find_packages
+>>> find_packages(where='src', exclude=['mypkg2'])
+['mypkg1']
 
-from setuptools import setup 
-requirements = [
-    'python_telegram-bot>=5.3.0'
-
-]
-
-test_requirements = [
-    'pytest>=3.0'
-
-]
+from setuptools import setup, find_packages
 
 
 with open("README.md", "r") as f:
 
     long_description = f.read()
 
-setuptools.setup(
+setup(
 
     name="<PythonTesting>", # Replace with your username
 
     version="1.0.0",
 
-    #Findpackages = ['mypackage',],
+    packages = find_packages() + find_packages(where='src', excludee=['mypkg2']),
 
-    package_dir = {'mypackage': 'mypackage'},
+    package_dir = {'': 'src', 'base': 'base'},
 
     author ="<cheminhquan>",
 
@@ -48,7 +42,7 @@ setuptools.setup(
 
     #homepage = "https://github.com/PaulQuanChe/PythonTesting.git",
     
-    url="<https://github.com/authorname/templatepackage>",
+    url="<>",
 
     packages = setuptools.find_packages(),
 
